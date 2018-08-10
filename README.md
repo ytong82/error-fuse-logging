@@ -32,6 +32,7 @@ fuse.sampling.ratio = 10
     2018-08-10 17:59:19,185 DEBUG () [pool-1-thread-18] LoggingThread - [SAMPLING][SHOULD BE FILTERED OUT] [Logger 47] Print log entry 19
 
 未被采样器忽略的日志输出如：
+    
     2018-08-10 17:59:15,668 DEBUG () [pool-1-thread-15] LoggingThread - [SAMPLING] [Logger 48] Print log entry 18
 
 运行程序，请在程序根目录下输入maven:package
