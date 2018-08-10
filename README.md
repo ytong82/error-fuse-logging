@@ -12,6 +12,7 @@ fuse.fuse.threshold 日志熔断监视器的采样阀值
 fuse.sampling.ratio 系统熔断之后的采样频率
 
 以模板中配置的参数为例
+
 fuse.fusing.time = 60
 
 fuse.fuse.threshold = 50
