@@ -14,6 +14,7 @@ public class App {
 		logger.info("Start test.");
 		
 		// start thread pool to run logging thread
+		// will see log fused and sampling output
 		ExecutorService executor = Executors.newFixedThreadPool(20);
 		for (int index=0; index<50; index++) {
 			String threadName = "Logger " + index;
@@ -26,12 +27,14 @@ public class App {
 		
 		// sleep for 60 seconds
 		try {
+			// this log entry should be printed since it is not fused.
 			logger.info("Sleep for 60 seconds.");
 			Thread.sleep(60 * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		
+		// will not see log fused
 		ExecutorService executor2 = Executors.newFixedThreadPool(1);
 		for (int index=0; index<2; index++) {
 			String threadName2 = "Logger2 " + index;
