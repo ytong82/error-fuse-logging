@@ -38,6 +38,10 @@ public class ErrorFuseHelperImpl implements ErrorFuseHelper {
 		}	
 	}
 	
+	
+	// use the combination of file name, class name and line number to define to key for every fuse buckets
+	// setup every fuse bucket in fuse buckets for every time period defined by fuse.fusing.time
+	// calculate if we request to print logger more than fuse.fuse.threshold, if so, fuse it
 	public boolean checkIfFused(LoggingEvent loggingEvent) {
 		String toStringMd5Hex = getLoggingEventMd5Hex(loggingEvent);
 		if (lefbc.get(toStringMd5Hex) == null) {
