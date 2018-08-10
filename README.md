@@ -40,4 +40,6 @@ fuse.sampling.ratio = 10
 
 下一步的计划是补上Junit测试用例中的断言，保证输出的日志和我们的设计一致。
 
-David Tong (ytong82@aliyun.com)
+David Tong 
+
+ytong82@aliyun.com
